@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title> {{product.nombre}} </ion-title>
+        <ion-buttons slot="end">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    
+      </ion-toolbar>
+    </ion-card-header>
+    <ion-card-content>
+
+      <img [src]="product.img" alt="{{ product.img }}">
+     
+   
+     
+        <h2></h2>
+        <p>Precio: ${{ product.precio }}</p>
+        <p>detalles: {{product.descripcion}}</p>
+    </ion-card-content>
+  </ion-card>
+  <div class="center-button">
+    <ion-button (click)="addToCart(product)">Agregar al carrito</ion-button>
+    <ion-button><ion-icon name="heart-outline"></ion-icon></ion-button>
+  </div>
+</ion-content>
